@@ -1,0 +1,52 @@
+Protokoll   -Digitale Filter unter MATLAB 4.x-      07-Dec-2002
+
+
+Filtertyp: FIR-Filter,Tiefpaﬂ
+
+Entwurfsverfahren: Tschebyscheff-Approximation nach Parks-McClellan
+
+Filterordnung N:  7
+
+Band 1: 
+	normierte untere Bandgrenze: 0.00000
+	normierte obere  Bandgrenze: 0.35
+Band 2: 
+	normierte untere Bandgrenze: 0.4
+	normierte obere  Bandgrenze: 0.50000
+
+maximale Welligkeit im Durchlaﬂbereich: 0.75 dB
+maximale Welligkeit im Sperrbereich:    20 dB
+
+berechnete Filterkoeffizienten:
+
+b(  0) = +0.1009872421540989
+b(  1) = +0.0055774160077415
+b(  2) = -0.1193875851275674
+b(  3) = +0.6019045429783416
+b(  4) = +0.6019045429783416
+b(  5) = -0.1193875851275674
+b(  6) = +0.0055774160077415
+b(  7) = +0.1009872421540989
+ 
+
+a(  0) = +1.0000000000000000
+
+
+Nullstellen: 
+
+   Realteil       Imagin‰rteil         Betrag     Phase    Anz.
+===============================================================
+     1.242873       1.493741         1.943192      50.238    1
+     1.242873      -1.493741         1.943192     -50.238    1
+    -1.557028       0.000000         1.557028     180.000    1
+    -1.000000       0.000000         1.000000     180.000    1
+    -0.642249       0.000000         0.642249     180.000    1
+     0.329151       0.395589         0.514617      50.238    1
+     0.329151      -0.395589         0.514617     -50.238    1
+ 
+
+Polstellen: 
+
+   Realteil       Imagin‰rteil         Betrag     Phase    Anz.
+===============================================================
+     0.000000       0.000000         0.000000       0.000    7

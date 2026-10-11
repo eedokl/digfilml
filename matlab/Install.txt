@@ -1,0 +1,48 @@
+Hinweise zur Installation
+
+Um eine einwandfreie Funktion des Programms 
+"Digitale Filter unter MATLAB" 
+zu gewährleisten, müssen folgende 
+Voraussetzungen erfüllt sein:
+
+- Korrekt installiertes Programmsystem 
+  "MATLAB 4.x für Windows"
+
+- Vorhandensein der 
+  "Signal Processing Toolbox" bzw. 
+  der Studentenversion von MATLAB 4.x
+
+- Nach Möglichkeit sollte Windows auf 
+  eine Auflösung von 800·600 Bildpunkten 
+  bei kleiner Schriftart eingestellt sein.
+
+Soll die im Programm vorhandene Möglichkeit 
+der Echtzeitfilterung genutzt werden, 
+muß zusätzlich das DSP-Kit V3.1 
+für MATLAB installiert sein.
+
+- ELF DSP-Board mit TMS320C31
+- Zugehöriger Treiber in Form 
+  der obigen Toolbox
+
+Installationsvorgang:
+---------------------
+- Erstellen des Unterverzeichnisses "DIGFILML" 
+  im vorhandenen MATLAB-Pfad
+- Kopieren der Programmdateien inklusive des 
+  Unterverzeichnisses "TEMP"
+- Aufnahme des Pfades, z.B. D:\MATLAB\DIGFILML 
+  in der Datei "MATLABRC.M"
+- Eventuell anpassen von Einstellungen in 
+  der Datei DIGFILML.INI
+
+Um bei vorhandener DSP-Karte eine 
+Echtzeitfilterung zu ermöglichen, 
+muß das Board initialisiert werden, 
+z.B. durch Aufruf in der Datei AUTOEXEC.BAT:
+
+ELF_LOAD /GO D:\MATLAB4\TOOLBOX\ELF31\ELFC.ELF
+
+Die Installation des Boards kann durch Eingabe 
+des Befehls ELFINIT in der MATLAB 
+Kommandoebene überprüft werden.

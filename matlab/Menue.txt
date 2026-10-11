@@ -1,0 +1,52 @@
+DIGFILML - Digitale Filter unter MATLAB 4.x
+<
+  &Datei                       % 1.Menupunkt
+  <
+  &Neustart,b=[];a=[];filename=[];drawmain(b,a,filename);
+
+  Aktuelle Protokoll&datei anzeigen,protocol;
+
+  Protokoll &laden...,loadprot('load');drawmain(b,a,filename);
+  Protokoll &speichern unter...,loadprot('save_as');
+
+  Gra&phik drucken,printok('Landscape');
+  Drucker &einrichten...,print -dsetup
+
+  &Beenden        Alt+F4,clear all ;close all;
+  >
+  Filter&entwurf
+  <
+    FIR-Filterkoeffizienten &eingeben,eingafir;
+    &IIR-Filterkoeffizienten eingeben,eingaiir;
+
+    FIR-Filter/&Fenster-Methode...,fir_wind;
+    FIR-Filter/&Tschebyscheff-Approximation (1)...,fir_cheb;
+    FIR-Filter/Fenster-Methode mit &Kaiserfenster und Tschebyscheff-Approximation (2)...,filtcheb('initialize',fontsize);
+    FIR-Filter/&Lineare Programmierung mit METEOR...,meteform('initialize',fontsize);
+
+    IIR-Filter/Transformation klassischer &Analogfilter...,filtmake('initialize',fontsize);filtertyp=4;
+    IIR-Filter/&Yule-Walker-Methode...,iir_yule;
+
+    Filterentwurf in der &z-Ebene...,zmenu('start',b,a);filtertyp=4;
+  >
+  Filter&transformation
+  <
+    Mi&nimum-Phasensystem,b=minphase(b);makeprot('mini',[],b,a);drawmain(b,a,filename);
+    Ma&ximum-Phasensystem,b=maxphase(b);makeprot('maxi',[],b,a);drawmain(b,a,filename);
+    &lineare Phase rekonstruieren,b=linphase(b);makeprot('lin',[],b,a);drawmain(b,a,filename);
+
+    &ARMA-Modell...,filtarma('initialize',fontsize,b,a);
+  >
+  &Filteranalyse,filtplot('initialize',fontsize);
+  E&chtzeit,echtzeit;
+  <
+  >
+  &Hilfe
+  <
+    &Hilfe,!winhelp digfilml.hlp
+
+    &Info,infodigf;
+  >
+>
+
+
